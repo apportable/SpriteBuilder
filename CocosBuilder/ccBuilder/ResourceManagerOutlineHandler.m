@@ -93,7 +93,8 @@
     RMResource *res = item;
     if ([item isKindOfClass:[RMResource class]]) {
         if (res.type == kCCBResTypeImage) {
-            height = kRMImagePreviewSize + 4;
+            CGFloat viewScale = [AppDelegate appDelegate].derivedViewScaleFactor;
+            height = kRMImagePreviewSize * viewScale + 4;
         }
     }
     return height;
