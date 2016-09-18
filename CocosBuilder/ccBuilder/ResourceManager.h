@@ -32,7 +32,7 @@
 @class RMPackage;
 
 #define kCCBMaxTrackedDirectories 500
-#define kRMImagePreviewSize       32.0
+#define kRMImagePreviewSize       50.0
 
 @interface ResourceManager : NSObject <SCEventListenerProtocol>
 {

@@ -40,7 +40,7 @@
 
 + (void)setAttributedTitle:(NSString*)fontName ofMenuItem:(NSMenuItem*)item;
 
-+ (NSImage*) thumbnailImageForResource:(RMResource*)res;
++ (NSImage*) thumbnailImageForResource:(RMResource*)res fixedSize:(bool) fixedSize;
 
 + (NSImage*) iconForResource:(RMResource*) res;
 

@@ -315,10 +315,10 @@
 
 #pragma mark File icons
 
-+ (NSImage*) thumbnailImageForResource:(RMResource*)res {
++ (NSImage*) thumbnailImageForResource:(RMResource*)res fixedSize:(bool)fixedSize {
     
     NSString* path = [res absoluteAutoPathForResolution:nil];
-    CGFloat viewScale = [AppDelegate appDelegate].derivedViewScaleFactor;
+    CGFloat viewScale = fixedSize ? 1.0 : [AppDelegate appDelegate].derivedViewScaleFactor;
     CGSize size = CGSizeMake(kRMImagePreviewSize*viewScale, kRMImagePreviewSize*viewScale);
     NSURL *fileURL = [NSURL fileURLWithPath:path];
     
@@ -397,7 +397,7 @@
         RMResource* res = item.representedObject;
         
         if (res.type == kCCBResTypeImage) {
-            NSImage *image = [self thumbnailImageForResource:res];
+            NSImage *image = [self thumbnailImageForResource:res fixedSize:NO];
             [item setImage:image];
         }
         

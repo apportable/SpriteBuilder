@@ -89,12 +89,13 @@
 
 - (CGFloat)outlineView:(NSOutlineView *)outlineView heightOfRowByItem:(id) item
 {
-    float height = 20;
+    float height = 20; //default, was in xib file, it's for any other items
     RMResource *res = item;
     if ([item isKindOfClass:[RMResource class]]) {
         if (res.type == kCCBResTypeImage) {
-            CGFloat viewScale = [AppDelegate appDelegate].derivedViewScaleFactor;
-            height = kRMImagePreviewSize * viewScale + 4;
+            //lets try with fixed size
+            //CGFloat viewScale = [AppDelegate appDelegate].derivedViewScaleFactor;
+            height = kRMImagePreviewSize /*viewScale*/ + 4;
         }
     }
     return height;
@@ -282,7 +283,7 @@
         if (res.type == kCCBResTypeImage)
         {
             //icon = [self smallIconForFileType:@"png"];
-            icon = [ResourceManagerUtil thumbnailImageForResource:item];
+            icon = [ResourceManagerUtil thumbnailImageForResource:item fixedSize:YES];
         }
         else if (res.type == kCCBResTypeBMFont)
         {
