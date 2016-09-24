@@ -51,23 +51,33 @@ typedef enum {
     kCCBTransformHandleNone = 0,
     kCCBTransformHandleDownInside,
     kCCBTransformHandleMove,
-    kCCBTransformHandleScale,
+//    kCCBTransformHandleScale,
     kCCBTransformHandleRotate,
-    kCCBTransformHandleAnchorPoint,
-    kCCBTransformHandleSkew,
+//    kCCBTransformHandleAnchorPoint,
+//    kCCBTransformHandleSkew,
 } CCBTransformHandle;
 
+//typedef enum {
+//    //most useless feature, especially for small Sprites, in any case never needed to change the anchorPoint using the mouse..
+//    kCCBToolAnchor      =(1 << 0),
+//    kCCBToolTranslate   =(1 << 1),
+//    kCCBToolScale       =(1 << 2),
+//    kCCBToolGrab        =(1 << 3),
+//    kCCBToolSkew        =(1 << 4), same useless, never used
+//    kCCBToolRotate      =(1 << 5),
+//    kCCBToolSelection   =(1 << 6),
+//    kCCBToolMax         =(1 << 7)
+//}CCBTool;
 typedef enum {
     //most useless feature, especially for small Sprites, in any case never needed to change the anchorPoint using the mouse..
-    //kCCBToolAnchor      =(1 << 0),
-    kCCBToolTranslate   =(1 << 1),
-    //kCCBToolScale       =(1 << 2), sometimes used, but mostly cause problems: when I just want to change Node size, it's just changing scale, so if I always change Node sizes manually, why it's needed?
-    kCCBToolGrab        =(1 << 3),
-    //kCCBToolSkew        =(1 << 4), same useless, never used
-    kCCBToolRotate      =(1 << 5),
-    kCCBToolSelection   =(1 << 6),
-    kCCBToolMax         =(1 << 7)
+    kCCBToolTranslate   =(1 << 0),
+    kCCBToolGrab        =(1 << 1),
+    kCCBToolRotate      =(1 << 2),
+    kCCBToolSelection   =(1 << 3),
+    kCCBToolMax         =(1 << 4)
+    
 }CCBTool;
+
 
 enum {
     kCCBCanvasColorBlack = 0,

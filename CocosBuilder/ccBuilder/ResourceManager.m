@@ -33,7 +33,7 @@
 #import "ProjectSettings.h"
 #import "CCBFileUtil.h"
 #import <CoreGraphics/CGImage.h>
-#import <QTKit/QTKit.h>
+#import <QTKit/QTKitDefines.h>
 #import <MacTypes.h>
 #import "CCBDirectoryPublisher.h"
 #import "SoundFileImageController.h"
