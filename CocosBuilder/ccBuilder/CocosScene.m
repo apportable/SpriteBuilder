@@ -879,7 +879,8 @@ static NSString * kZeroContentSizeImage = @"sel-round.png";
         CGPoint unitSegment2 = ccpNormalize(segment2);
         
         const float kMinDistanceForRotation = 1.0f; //8.0f
-        const float kMaxDistanceForRotation = 15.0f; //also this was 25.0f very annoying for many sprites placed one by ne very closely
+        const float kMaxDistanceForRotation = 5.0f; //also this was 25.0f very annoying for many sprites placed one by ne very closely
+                                                    //even after 15.0f it was too much, set lower value, I'm using small spites...
        
         
         CGPoint mouseVector = ccpSub(_mousePos, p2);
